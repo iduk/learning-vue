@@ -1,11 +1,18 @@
 // vue.config.js
-const fs = require("fs");
-
 module.exports = {
   css: {
+    requireModuleExtension: false,
+    sourceMap: true,
+
     loaderOptions: {
-      sass: {
-        data: fs.readFileSync("src/variables.scss", "utf-8")
+      css: {
+        modules: {
+          // [name] = file , [local] = class
+          localIdentName: "[name]__[local]__[hash:base64:5]"
+        }
+      },
+      scss: {
+        prependData: `@import "@/assets/Styles/_variables.scss";`
       }
     }
   }

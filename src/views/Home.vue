@@ -1,8 +1,10 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <section :class="$style.container">
+    <div :class="$style.boxing">
+      <img alt="Vue logo" src="../assets/logo.png" />
+      <HelloWorld msg="Welcome to Your Vue.js App" />
+    </div>
+  </section>
 </template>
 
 <script>
@@ -16,3 +18,15 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" module>
+$primary-color: #e1f5ff;
+
+.container {
+  background-color: #0b3144;
+  color: white;
+  .boxing {
+    padding: 3rem;
+  }
+}
+</style>
