@@ -1,8 +1,8 @@
 <template>
   <section :class="$style.container">
     <div :class="$style.boxing">
-      <img alt="Vue logo" src="../assets/logo.png" />
-      <HelloWorld msg="Welcome to Your Vue.js App" />
+      <img alt="POS Image" src="@/assets/img/pos.svg" />
+      <HelloWorld msg="learning Vue😎" />
     </div>
   </section>
 </template>
@@ -27,6 +27,12 @@ $primary-color: #e1f5ff;
   color: white;
   .boxing {
     padding: 3rem;
+    text-align: center;
+    > img {
+      display: inline-block;
+      width: 400px;
+      height: auto;
+    }
   }
 }
 </style>
